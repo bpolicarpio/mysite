@@ -119,6 +119,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_ROOT = '/home/bpol/mysite/mysite/weather/static/'
 STATIC_URL = '/static/'
 
 # Default primary key field type

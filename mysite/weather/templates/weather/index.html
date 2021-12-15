@@ -1,40 +1,61 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Weather</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 <h1>Hi Kait!</h1>
-<form style="margin:10px">
-    <div><h4>How are you feeling today?</h4></div>
-    <div style="margin-left:10px">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="feeling" id="1" value="1">
-            <label class="form-check-label" for="1">1</label>
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>How are you feeling today?</h4>
+            </div>
+        </div>
+        <div class="row" style="text-align:center">
+                <div class="col" style="text-align:center">
+                    <input class="form-check-input" type="radio" name="feeling" id="happy" value="happy">
+                    <label class="form-check-label" for="happy">Happy! :)</label>
+                </div>
+                <div class="col">
+                    <input class="form-check-input" type="radio" name="feeling" id="sad" value="sad">
+                    <label class="form-check-label" for="sad">Sad :(</label>
+                </div>
+        </div>
+        <div class="row" style="text-align:center">
+            <div class="col">
+                <img src="{% static 'happy.png' %}">
+            </div>
+            <div class="col">
+                <img src="{% static 'sad.png' %}">
+            </div>
         </div>
     </div>
-    <div><h4>How was the weather?</h4></div>
-    <div style="margin-left:10px">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="weather" id="foggy" value="foggy">
-            <label class="form-check-label" for="foggy">Foggy</label>
+    <br>
+    <div class="row">
+        <div class="col" style="text-align:center">
+            <h4>How was the weather?</h4>
         </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="weather" id="mostly_foggy" value="mostly_foggy">
-            <label class="form-check-label" for="mostly_foggy">Mostly Foggy</label>
+    </div>
+    <div class="row" style="text-align:center">
+            <div class="col" style="text-align:center">
+                <input class="form-check-input" type="radio" name="weather" id="good" value="good">
+                <label class="form-check-label" for="good">Good! :)</label>
+            </div>
+            <div class="col">
+                <input class="form-check-input" type="radio" name="weather" id="bad" value="bad">
+                <label class="form-check-label" for="bad">Bad :(</label>
+            </div>
+    </div>
+    <div class="row" style="text-align:center">
+        <div class="col">
+            <img src="">
         </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="weather" id="partial" value="partial">
-            <label class="form-check-label" for="partial">Partially Foggy, Partially Sunny</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="weather" id="mostly_sunny" value="mostly_sunny">
-            <label class="form-check-label" for="mostly_sunny">Mostly Sunny</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="weather" id="sunny" value="sunny">
-            <label class="form-check-label" for="sunny">Sunny</label>
+        <div clas="col">
+            <img src="">
         </div>
     </div>
 </form>

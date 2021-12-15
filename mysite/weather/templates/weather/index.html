@@ -7,7 +7,9 @@
     <title>Weather</title>
 </head>
 <body>
-<h1>Hi Kait!</h1>
+<div class="jumbotron jumbotron-fluid" style="background-color:lightblue; color:grey">
+    <h1 class="display-4">Hi Kait!</h1>
+</div>
 <form>
     <div class="container">
         <div class="row">
@@ -52,10 +54,10 @@
     </div>
     <div class="row" style="text-align:center">
         <div class="col">
-            <img src="">
+            <img src="{% static 'sunny.jpg' %}" style="width:50%">
         </div>
-        <div clas="col">
-            <img src="">
+        <div class="col">
+            <img src="{% static 'cloudy.png' %}" style="width:50%">
         </div>
     </div>
 </form>

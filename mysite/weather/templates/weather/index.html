@@ -10,8 +10,19 @@
 <div class="jumbotron jumbotron-fluid" style="background-color:lightblue; color:grey">
     <h1 class="display-4">Hi Kait!</h1>
 </div>
-<form>
-    <div class="container">
+{% if message %}
+    <div class="row" style="text-align:center">
+        <div class="col-12">
+            <div class="alert alert-danger" role="alert">
+                {{ message}}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+<form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    <div class="container-fluid">
         <div class="row">
             <div class="col" style="text-align:center">
                 <h4>How are you feeling today?</h4>
@@ -58,6 +69,11 @@
         </div>
         <div class="col">
             <img src="{% static 'cloudy.png' %}" style="width:50%">
+        </div>
+    </div>
+    <div class="row" style="text-align:center">
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit for Today</button>
         </div>
     </div>
 </form>

@@ -19,8 +19,11 @@ def index(request):
                 weather = False
 
             Weather.objects.create(weather=weather, feeling=feeling)
+            results = Weather.objects.all()
 
-            return HttpResponse(f"Feeling: {feeling}, Weather: {weather}")
+            return render(request, "weather/results.html", {
+                "results": results
+            })
         else:
             return render(request, "weather/index.html", {
                 "message": "Please answer all questions."

@@ -21,11 +21,20 @@
 {% endif %}
 
 <div class="row">
-  <div class="col">
-    {% for result in results %}
-    <div>{{ result.date }} , {{ result.feeling }}, {{ result.weather }}</div>
-    {% endfor %}
-  </div>
+    <div class="col">
+        {% for result in results %}
+            <div>{{ result.date }} , {{ result.feeling }}, {{ result.weather }}</div>
+        {% endfor %}
+    </div>
+    <div class="col">
+        <img src="{% static 'weath.png' %}">
+    </div>
+<div class="row">
+    <div class="col">
+        <img src="{% static 'feel.png' %}">
+    </div>
+</div>
+
 </div>
 
 </body>
